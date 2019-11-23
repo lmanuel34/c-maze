@@ -9,6 +9,7 @@ this project reads in a .txt file that is a maze and the program finds a path to
 #include <fstream>
 #include <vector>
 #include <string>
+	
 Maze::Maze() : mazeWidth(0), mazeLength(0), exitRow(0), exitCol(0), entRow(0), entCol(0)
 {
 	SquareData* mySquare = new SquareData;
@@ -17,6 +18,7 @@ Maze::Maze() : mazeWidth(0), mazeLength(0), exitRow(0), exitCol(0), entRow(0), e
 	mySquare->State = ' ';
 	squares.push_back(mySquare);
 }
+
 Maze::Maze(std::ifstream& inputFile) {
 	cout << "State of file reads: " << endl;
 	cout << "Good: " << inputFile.good() << endl;
